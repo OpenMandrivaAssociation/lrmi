@@ -12,7 +12,6 @@ Source0:	http://prdownloads.sourceforge.net/lrmi/%{name}-%{version}.tar.bz2
 Patch0:		lrmi-0.10-makefile.patch
 Patch1:		lrmi-no_strip.diff
 ExclusiveArch:	%ix86
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 LRMI is a library for calling real mode BIOS routines under Linux.
