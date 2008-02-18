@@ -4,7 +4,7 @@
 Summary:	Library for calling real mode BIOS routines under Linux
 Name:		lrmi
 Version:	0.10
-Release:	%mkrel 5
+Release:	%mkrel 6
 License:	MIT
 Group:		System/Libraries
 URL:		http://sourceforge.net/projects/lrmi/
