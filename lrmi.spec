@@ -68,7 +68,7 @@ install -D vbetest %{buildroot}%{_bindir}/vbetest
 %clean
 rm -rf %{buildroot}
 
-%files
+%files tools
 %defattr(-,root,root)
 %doc README
 %{_bindir}/*
