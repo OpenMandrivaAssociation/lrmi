@@ -4,13 +4,15 @@
 Summary:	Library for calling real mode BIOS routines under Linux
 Name:		lrmi
 Version:	0.10
-Release:	%mkrel 7
+Release:	%mkrel 8
 License:	MIT
 Group:		System/Libraries
 URL:		http://sourceforge.net/projects/lrmi/
 Source0:	http://prdownloads.sourceforge.net/lrmi/%{name}-%{version}.tar.bz2
 Patch0:		lrmi-0.10-makefile.patch
 Patch1:		lrmi-no_strip.diff
+Patch2:		lrmi-build_fix.diff
+Patch3:		lrmi-shared_vbetest_fix.diff
 ExclusiveArch:	%ix86
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
@@ -45,9 +47,11 @@ LRMI is a library for calling real mode BIOS routines under Linux.
 %setup -q
 %patch0 -p1
 %patch1 -p0
+%patch2 -p0
+%patch3 -p0
 
 %build
-%make
+%make CFLAGS="%{optflags}"
 
 %install
 rm -rf %{buildroot}
@@ -81,5 +85,3 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %{_libdir}/liblrmi.so
 %{_includedir}/lrmi.h
-
-
