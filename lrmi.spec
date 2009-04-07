@@ -51,7 +51,7 @@ LRMI is a library for calling real mode BIOS routines under Linux.
 %patch3 -p0
 
 %build
-%make CFLAGS="%{optflags}"
+make CFLAGS="%{optflags}"
 
 %install
 rm -rf %{buildroot}
