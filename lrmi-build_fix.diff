@@ -1,0 +1,16 @@
+--- lrmi.c	2005-12-05 00:44:44.000000000 +0100
++++ lrmi.c.oden	2008-07-12 15:00:06.000000000 +0200
+@@ -30,6 +30,13 @@
+ #include <string.h>
+ 
+ #if defined(__linux__)
++#ifndef TF_MASK
++#define TF_MASK X86_EFLAGS_TF
++#define IF_MASK X86_EFLAGS_IF
++#define IOPL_MASK X86_EFLAGS_IOPL
++#define VIF_MASK X86_EFLAGS_VIF
++#define VIP_MASK X86_EFLAGS_VIP
++#endif
+ 
+ #include <asm/vm86.h>
+ #include <signal.h>

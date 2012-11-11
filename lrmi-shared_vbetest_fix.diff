@@ -1,0 +1,13 @@
+--- Makefile	2008-07-12 15:07:15.000000000 +0200
++++ Makefile.oden	2008-07-12 15:06:01.000000000 +0200
+@@ -30,8 +30,8 @@
+ 	ln -sf $(LIBNAME).so.$(VERSION) $(LIBNAME).so.$(MAJOR)
+ 	ln -sf $(LIBNAME).so.$(MAJOR) $(LIBNAME).so
+ 
+-vbetest: vbetest.c liblrmi.a
+-	$(CC) $(CPPFLAGS) $(CFLAGS) -o $@ $^
++vbetest: vbetest.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) -o $@ $^ -L. -llrmi
+ 
+ install:
+ 	mkdir -p $(LIBDIR)

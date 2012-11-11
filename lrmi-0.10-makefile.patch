@@ -1,0 +1,11 @@
+--- lrmi-0.10/Makefile~	2005-12-05 00:33:57.000000000 +0100
++++ lrmi-0.10/Makefile	2006-04-03 18:49:11.000000000 +0200
+@@ -40,7 +40,7 @@
+ 	ln -sf $(LIBNAME).so.$(VERSION) $(LIBDIR)/$(LIBNAME).so.$(MAJOR)
+ 	ln -sf $(LIBNAME).so.$(MAJOR) $(LIBDIR)/$(LIBNAME).so
+ 	install -m 644 -s -p lrmi.h $(INCDIR)/lrmi.h
+-	ldconfig
++
+ 
+ .PHONY: clean
+ clean:
