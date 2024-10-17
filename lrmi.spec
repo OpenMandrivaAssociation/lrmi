@@ -8,7 +8,7 @@ Version:	0.10
 Release:	26
 License:	MIT
 Group:		System/Libraries
-Url:		http://sourceforge.net/projects/lrmi/
+Url:		https://sourceforge.net/projects/lrmi/
 Source0:	http://prdownloads.sourceforge.net/lrmi/%{name}-%{version}.tar.bz2
 Patch0:		lrmi-0.10-makefile.patch
 Patch1:		lrmi-no_strip.diff
