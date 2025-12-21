@@ -16,6 +16,7 @@ Patch2:		lrmi-build_fix.diff
 Patch3:		lrmi-shared_vbetest_fix.diff
 ExclusiveArch:	%ix86
 
+BuildRequires:	make
 %description
 LRMI is a library for calling real mode BIOS routines under Linux.
 
